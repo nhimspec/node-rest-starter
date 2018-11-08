@@ -1,0 +1,19 @@
+{
+    "name": "starter-kit",
+    "version": "1.0.0",
+    "description": "Nodejs starter kit",
+    "author": "Sonic Spec <nhimspec@gmail.com>",
+    "private": true,
+    "scripts": {
+        "start": "nodemon app/index.js"
+    },
+    "dependencies": {
+        "body-parser": "^1.18.3",
+        "express": "^4.16.4",
+        "jsonwebtoken": "^8.3.0",
+        "mongoose": "^5.3.10"
+    },
+    "devDependencies": {
+        "nodemon": "^1.18.6"
+    }
+}
