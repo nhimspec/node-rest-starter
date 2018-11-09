@@ -27,15 +27,15 @@ const UserSchema = new mongoose.Schema(
     { timestamps: true }
 );
 
-UserSchema.methods.validPassword = function(password) {
+UserSchema.methods.validPassword = function (password) {
     return this.password === password;
 };
 
-UserSchema.methods.setPassword = function(password) {
+UserSchema.methods.setPassword = function (password) {
     this.password = password;
 };
 
-UserSchema.methods.generateJWT = function() {
+UserSchema.methods.generateJWT = function () {
     var today = new Date();
     var exp = new Date(today);
     exp.setDate(today.getDate() + 60);
@@ -50,7 +50,7 @@ UserSchema.methods.generateJWT = function() {
     );
 };
 
-UserSchema.methods.toAuthJSON = function() {
+UserSchema.methods.toAuthJSON = function () {
     return {
         fullname: this.fullname,
         username: this.username,
